@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <% @recipes.each do |recipe| %>
+      <h2><%= recipe.name %></h2>
+      <a href= <%= "/recipes/#{recipe.id}" %>>click here to see more information about this recipe</a>
+    <% end %>
+
+    <form action="/recipes/new" method="get">
+      <input type="submit" value="create new recipe">
+    </form>
+  </body>
+</html>
